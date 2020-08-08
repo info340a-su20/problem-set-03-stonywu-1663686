@@ -1,4 +1,63 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  height: inherit;
+}
+
+html{
+  height: 100%;
+}
+
+main{
+  flex: 1;
+}
+
+main > div{
+  height: 100%;
+}
+
+.bigflex{
+  display: flex;
+}
+
+.bigflex section{
+  padding: 1em;
+}
+
+.bigflex section.a{
+  flex-basis: 240px;
+}
+
+.bigflex section.b{
+  flex: 1;
+  background-color: #eee;
+}
+
+.bigflex section.c{
+  flex-basis: 180px;
+  flex-shrink: 0;
+}
+
+.smallflex{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card{
+  flex: 0 0 250px;
+  background-color: white;
+  margin: .5rem;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16), 0 1px 3px rgba(0, 0, 0, 0.23);
+}
+
+.card p{
+  padding: .5rem 1rem;
 }
